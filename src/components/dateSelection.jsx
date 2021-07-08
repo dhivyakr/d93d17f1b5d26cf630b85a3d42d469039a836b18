@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import styles from '../css/dateSelection.css';
+import styles from '../css/dateselection.css';
 const Button = styled.button`
   background: ${props => props.selected ? "gray" : "white"};
   color: ${props => props.selected ? "white" : "gray"};
