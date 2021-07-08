@@ -1,0 +1,29 @@
+.dateContainer {
+	display: flex;
+	overflow: scroll;
+}
+.dateContent {
+	padding: 13px;
+	background-color: white;
+	color: gray;
+}
+.dateContent.selected {
+	background-color: gray;
+	color: white;
+	border-radius: 50%;
+	min-width: 42px;
+}
+.dateContent.disabled {
+	opacity: 50%;
+	pointer-events: none;
+}
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+.flexContainer {
+  color: gray;
+  border: 2px solid gray;
+  border-radius: 3px;
+  margin: 0px 5px 0px 5px;
+}
