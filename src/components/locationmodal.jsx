@@ -18,7 +18,14 @@ const handleEscape = useCallback(event => {
   }, [close])
 
 useEffect(() => {
-	if(isOpen) document.addEventListener('keydown', handleEscape, false)
+	if(isOpen) {
+    document.addEventListener('keydown', handleEscape, false);
+    document.body.style.overflow = 'hidden';
+  }
+  else
+  {
+    document.body.style.overflow = '';
+  }
 	return () => {
 		document.removeEventListener('keydown', handleEscape, false)
 	}

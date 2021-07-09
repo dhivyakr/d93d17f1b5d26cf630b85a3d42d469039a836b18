@@ -1,0 +1,13 @@
+.productImage {
+	max-width: 100%;
+	height: auto;
+}
+.pdtDetailsContainer {
+	text-align: left;
+}
+.pdtDetWrapper {
+	display: flex;
+}
+.pdtPartner {
+	padding-right: 4px;
+}

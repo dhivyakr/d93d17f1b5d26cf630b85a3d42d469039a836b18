@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import moment from 'moment';
-import Header from './components/header'
+import Header from './components/header';
+import ProductList from './components/productList';
 
 class App extends Component {
 	constructor() {
@@ -40,6 +41,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header dates={this.state.dates}/>
+        <ProductList></ProductList>
       </div>
     );
   }

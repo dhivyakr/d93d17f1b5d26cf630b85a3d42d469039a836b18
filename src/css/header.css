@@ -1,14 +1,25 @@
+.backArrow, .chevron {
+	width: 18px;
+	height: 18px;
+}
+.arrowImage {
+	width: 100%;
+	height: 100%;
+}
+.deliveryAddress {
+	display: flex;
+}
 .dateContainer {
 	display: flex;
 	overflow: scroll;
 }
 .dateContent {
-	padding: 13px;
+	padding: 12px;
 	background-color: white;
-	color: gray;
+	color: #424749;
 }
 .dateContent.selected {
-	background-color: gray;
+	background-color: #424749;
 	color: white;
 	border-radius: 50%;
 	min-width: 42px;
@@ -23,10 +34,10 @@
 }
 .flexContainer {
   color: gray;
-  border: 2px solid gray;
+  border: 2px solid #424749;
   border-radius: 3px;
   margin: 0px 5px 0px 5px;
 }
 .addressContent {
-	padding: 5px;
+	padding: 4px;
 }
