@@ -9,6 +9,11 @@
 }
 .deliveryAddress {
 	display: flex;
+	position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 56px;
+    background-color: #ffffff;
 }
 .deliveryLocation {
 	font-size: 20px;
@@ -20,7 +25,11 @@
 }
 .dateContainer {
 	display: flex;
-	overflow: scroll;
+    overflow: scroll;
+    position: fixed;
+    top: 56px;
+    width: 92%;
+    background-color: #ffffff;
 }
 .dateContent {
 	padding: 12px;
@@ -45,7 +54,7 @@
   color: gray;
   border: 2px solid #424749;
   border-radius: 3px;
-  margin: 0px 5px 0px 5px;
+  margin: 137px 5px 0px 5px;
 }
 .addressContent {
 	padding: 4px;
