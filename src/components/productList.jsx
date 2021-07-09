@@ -10,7 +10,8 @@ const Button = styled.button`
   font-size: 1em;
   padding: 0.25em 1em;
   border: 0px;
-  width: 50%;
+  border-radius: 5px;
+  width: 60px;
 `
 function importAll(r) {
   let images = {};
@@ -35,16 +36,24 @@ const [cartData, setCartData] = useState(
 	            	<div id= {"id_product_" + idx} className={"productContainer"}>
 	            		<img className = "productImage" src = {images[d.pdtImage].default}/>
 	            		<div className = "pdtDetailsContainer">
-	            			<div className = "pdtRating">{d.rating}</div>
+		            		<div className = "ratingWrapper">	
+		            			<div className = "pdtRating">{d.rating}</div>
+		            			<div className = "ratingStar">
+						  			<img className = "ratingImage" src = {images['rating.png'].default}>
+						  			</img>
+					  			</div>
+				  			</div>
 	            			<div className = "pdtName">{d.pdtName}</div>
 	            			<div className = "pdtDetWrapper">
 		            			<div className = "pdtPartner">by {d.pdtPartner}</div>
 		            			<div className = "seperator"> . </div>
 		            			<div className = "pdtOwner">{d.pdtOwner}</div>
 	            			</div>
-	            			<div className = "pdtPrice">{d.currency}{d.price}</div>
+	            			<div className = "flexCont">
+	            				<div className = "pdtPrice">{d.currency}&nbsp;{d.price.toLocaleString()}</div>
+	            				<Button className="addToCartBtn" onClick={() => setCartData({itemCount: cartData.itemCount + 1, itemPrice: cartData.itemPrice + d.price})}>ADD+</Button>
+            				</div>
 	            		</div>
-		    			<Button className="addToCartBtn" onClick={() => setCartData({itemCount: cartData.itemCount + 1, itemPrice: cartData.itemPrice + d.price})}>ADD+</Button>
 	            	</div>)
 	        })
 

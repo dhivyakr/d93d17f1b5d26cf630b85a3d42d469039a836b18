@@ -2,6 +2,34 @@
     position: fixed;
     bottom: 0;
     background-color: #a23530;
-    width: 100%;
+    width: 95%;
     height: 50px;
+    transform: translateX(-50%);
+    left: 50%;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 0px 4px;
+}
+.cartCont {
+    display: flex;
+    padding-left: 8px;
+}
+.cartDataWrapper, .cartDataContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.cartDataWrapper {
+    padding-top: 4px;
+}
+.cartCont {
+    flex-direction: column;
+}
+.cartIcon {
+    width: 70px;
+}
+.cartImage {
+    max-height: 100%;
+}
+.shippingText {
+    padding-bottom: 4px;
 }

@@ -8,6 +8,34 @@
 .pdtDetWrapper {
 	display: flex;
 }
+.ratingWrapper {
+	display: flex;
+}
+.pdtRating {
+	line-height: 30px;
+	padding-right: 8px;
+}
+.ratingImage, .ratingImage {
+	height: 30px;
+}
 .pdtPartner {
 	padding-right: 4px;
+}
+.pdtRating {
+	font-size: 16px;
+}
+.pdtPrice, .pdtName{
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 23px;
+}
+.plpContainer {
+	padding-bottom: 60px;
+}
+.flexCont {
+	display: flex;
+	justify-content: space-between;
+}
+.productContainer {
+	padding: 12px;
 }

@@ -14,7 +14,7 @@ const productData = [
          "pdtPartner" : "Kulina",
          "pdtOwner" : "Uptown Lunch",
          "rating" : 4.5,
-         "price" : 35000,
+         "price" : 30000,
          "currency" : "Rp"
       },
       {
@@ -23,16 +23,16 @@ const productData = [
          "pdtPartner" : "Kulina",
          "pdtOwner" : "Uptown Lunch",
          "rating" : 4.5,
-         "price" : 35000,
+         "price" : 45000,
          "currency" : "Rp"
       },
       {
-         "pdtImage" : "product3.jpg",
+         "pdtImage" : "product1.jpg",
          "pdtName" : "Roasted chicken with scrambled eggs",
          "pdtPartner" : "Kulina",
          "pdtOwner" : "Uptown Lunch",
          "rating" : 4.5,
-         "price" : 35000,
+         "price" : 25000,
          "currency" : "Rp"
       }
    ]
