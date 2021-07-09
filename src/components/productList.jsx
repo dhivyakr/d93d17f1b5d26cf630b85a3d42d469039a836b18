@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 import styles from '../css/productList.css';
-import productData from '../js/products.js'
+import productData from '../js/products.js';
+import AddToCart from './addToCart.jsx'
 
 const Button = styled.button`
   background: #f9423a;
@@ -19,8 +20,13 @@ function importAll(r) {
 
 const images = importAll(require.context('../images', false, /\.(png|jpe?g|svg)$/));
 
-const ProductList = function(props) {
+const ProductList = function() {
+const [cartData, setCartData] = useState(
+	{itemCount: 0,
+    itemPrice: 0}
+);
 	return (
+	<div>
 		<div className="plpContainer">
 		{
 		  	productData.map(function(d, idx)
@@ -38,12 +44,18 @@ const ProductList = function(props) {
 	            			</div>
 	            			<div className = "pdtPrice">{d.currency}{d.price}</div>
 	            		</div>
-		    			<Button className="addToCartBtn">ADD+</Button>
+		    			<Button className="addToCartBtn" onClick={() => setCartData({itemCount: cartData.itemCount + 1, itemPrice: cartData.itemPrice + d.price})}>ADD+</Button>
 	            	</div>)
 	        })
 
 		}
 		</div>
+		<div>
+			<AddToCart cartData={cartData}></AddToCart>
+		</div>
+	</div>
 	)
+
+	
 }
 export default ProductList;

@@ -1,0 +1,7 @@
+.cartDataContainer {
+    position: fixed;
+    bottom: 0;
+    background-color: #a23530;
+    width: 100%;
+    height: 50px;
+}
