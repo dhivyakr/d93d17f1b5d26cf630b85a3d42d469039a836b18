@@ -6,6 +6,8 @@ import Modal from './locationmodal.jsx';
 import locationData from '../js/maps.js';
 import backArrow from '../images/backArrow.png';
 import chevron from '../images/chevron.png';
+import mapIcon from '../images/mapIcon.png';
+import mapPointer from '../images/mapPointer.png';
 
 const Header = function(props) {
 	const modal = useRef(null)
@@ -31,9 +33,23 @@ const Header = function(props) {
 	  </div>
 	  <Modal ref={modal}>
 	  	<div className="locationWrapper">
-		  	<div className="locationTitle">cek makanan yang tersedia di lokasi kamu</div>	
+		  	<div className="locationTitleTxt">cek makanan yang tersedia di lokasi kamu</div>
+		  	<input class="locationSearch" type="text">
+		  	</input>
+		  	<div className="mapPointer">
+  				<img className="mapPointerImg" src={mapPointer}/>
+  			</div>
 		  	<div>
-		  		{locationData.map((locationData) => <div className="addressContent">{locationData.place_name}<br></br>{locationData.formatted_address}</div>
+		  		{locationData.map((locationData) => 
+			  		<div className="addressContent">
+			  			<div className="mapIcon">
+			  				<img className="mapIconImg" src={mapIcon}/>
+			  			</div>
+			  			<div className="addressWrapper">
+				  			<div className="place">{locationData.place_name}</div>
+				  			<div className="address">{locationData.formatted_address}</div>
+			  			</div>
+		  			</div>
 		  		)}
 		  	</div>
 		</div>

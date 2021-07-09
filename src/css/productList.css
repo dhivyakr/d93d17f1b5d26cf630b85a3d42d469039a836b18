@@ -1,6 +1,7 @@
 .productImage {
 	max-width: 100%;
 	height: auto;
+	border-radius: 15px;
 }
 .pdtDetailsContainer {
 	text-align: left;
